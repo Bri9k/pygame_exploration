@@ -1,0 +1,89 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+COUNT	partickle.py	/^COUNT = 0$/;"	v
+DIMENSION	partickle.py	/^DIMENSION = 2$/;"	v
+G	partickle.py	/^G = 1$/;"	v
+PLAYER	partickle.py	/^PLAYER = 1$/;"	v
+UNLIVING	partickle.py	/^UNLIVING = 0$/;"	v
+__init__	automata.py	/^    def __init__(self, bitmap, rule = None):$/;"	m	class:cellularAutomaton
+__init__	partickle.py	/^    def __init__(self, mass, position, velocity, acceleration, size, color):$/;"	m	class:partickle
+acc	pakdapakdi.py	/^    acc = [0, 0]$/;"	v
+acc	pakdapakdi.py	/^acc = [0, 0]$/;"	v
+acc	physics.py	/^    acc = [0, 0]$/;"	v
+acceleration	physics.py	/^acceleration = [0, 0]$/;"	v
+attractors	physics.py	/^attractors = []$/;"	v
+bincorr	flashcards.py	/^        bincorr = str(format(nos[rind], '0' + str(k) + 'b'))$/;"	v
+bitmap	boredmata.py	/^bitmap = [[i % 2] * breadth for i in range(height)]$/;"	v
+breadth	boredmata.py	/^breadth = int(sys.argv[2])$/;"	v
+caught_count	pakdapakdi.py	/^caught_count = 0$/;"	v
+caught_count	physics.py	/^caught_count = 0$/;"	v
+cell	automata.py	/^    def cell(self, i, j):$/;"	m	class:cellularAutomaton
+cellularAutomaton	automata.py	/^class cellularAutomaton:$/;"	c
+clock	pakdapakdi.py	/^clock = pygame.time.Clock()$/;"	v
+clock	physics.py	/^clock = pygame.time.Clock()$/;"	v
+color	physics.py	/^color = (100, 100, 255)$/;"	v
+cont	flashcards.py	/^        cont = False$/;"	v
+cont	flashcards.py	/^cont = True$/;"	v
+cont	input.py	/^        cont = False$/;"	v
+cont	input.py	/^cont = True$/;"	v
+control	partickle.py	/^    def control(self, acc_incr):$/;"	m	class:partickle
+conway	boredmata.py	/^def conway($/;"	f
+dale	boredmata.py	/^dale = cellularAutomaton(bitmap)$/;"	v
+drawparticle	physics.py	/^def drawparticle(particle, screen):$/;"	f
+dt	pakdapakdi.py	/^dt = 1$/;"	v
+dt	partickle.py	/^dt = 1$/;"	v
+dt	physics.py	/^dt = 1$/;"	v
+going	boredmata.py	/^going = True$/;"	v
+height	boredmata.py	/^height = int(sys.argv[1])$/;"	v
+init	partickle.py	/^def init(constant, timestep, dimension):$/;"	f
+ip	flashcards.py	/^    ip = input()$/;"	v
+ip	input.py	/^    ip = input()$/;"	v
+k	flashcards.py	/^k = 3$/;"	v
+keys	pakdapakdi.py	/^    keys = pygame.key.get_pressed()$/;"	v
+keys	physics.py	/^    keys = pygame.key.get_pressed()$/;"	v
+mass	physics.py	/^mass = 1$/;"	v
+norule	automata.py	/^def norule(bitmap, length, breadth, i, j):$/;"	f
+nos	flashcards.py	/^nos = [i for i in range(2 ** k)]$/;"	v
+partickle	partickle.py	/^class partickle:$/;"	c
+player	physics.py	/^player = partickle(10, [(size \/ 2), (size \/ 2)], [0, 0], [0, 0], 5, (200, 200, 200))$/;"	v
+playerRect	pakdapakdi.py	/^    playerRect = pygame.Rect(pos[0], pos[1], 30, 30)$/;"	v
+pos	pakdapakdi.py	/^        pos = [random.randrange(spawnrange) for i in range(2)]$/;"	v
+pos	pakdapakdi.py	/^pos = [5, 5]$/;"	v
+position	physics.py	/^position = [0, 0]$/;"	v
+propagate	automata.py	/^    def propagate(self, rule=None):$/;"	m	class:cellularAutomaton
+respawn	pakdapakdi.py	/^        respawn = True$/;"	v
+respawn	pakdapakdi.py	/^    respawn = False$/;"	v
+respawn	pakdapakdi.py	/^respawn = True$/;"	v
+rind	flashcards.py	/^    rind = random.randrange(len(nos))$/;"	v
+running	pakdapakdi.py	/^            running = False$/;"	v
+running	pakdapakdi.py	/^running = True$/;"	v
+running	physics.py	/^            running = False$/;"	v
+running	physics.py	/^running = True$/;"	v
+screen	pakdapakdi.py	/^screen = pygame.display.set_mode(screensize)$/;"	v
+screen	physics.py	/^screen = pygame.display.set_mode(screensize)$/;"	v
+screenrect	pakdapakdi.py	/^screenrect = pygame.Rect(0, 0, size, size)$/;"	v
+screenrect	physics.py	/^screenrect = pygame.Rect(0, 0, size, size)$/;"	v
+screensize	pakdapakdi.py	/^screensize = [size, size]$/;"	v
+screensize	physics.py	/^screensize = [size, size]$/;"	v
+size	pakdapakdi.py	/^size = 500$/;"	v
+size	physics.py	/^size = 500$/;"	v
+spawn_player	pakdapakdi.py	/^       spawn_player  = True$/;"	v
+spawn_player	pakdapakdi.py	/^    spawn_player = False$/;"	v
+spawn_player	pakdapakdi.py	/^spawn_player = True$/;"	v
+spawnrange	pakdapakdi.py	/^spawnrange = size - 100$/;"	v
+spawnrange	physics.py	/^spawnrange = size - 100$/;"	v
+system	physics.py	/^system = []$/;"	v
+targetRect	pakdapakdi.py	/^    targetRect = pygame.Rect(target_pos[0], target_pos[1], 20, 20)$/;"	v
+target_acc	pakdapakdi.py	/^        target_acc = [0, 0]$/;"	v
+target_pos	pakdapakdi.py	/^        target_pos = [random.randrange(spawnrange), random.randrange(spawnrange)]$/;"	v
+target_vel	pakdapakdi.py	/^        target_vel = [0, 0]$/;"	v
+time	pakdapakdi.py	/^time = 0$/;"	v
+update	partickle.py	/^    def update(self, system, boundingRect):$/;"	m	class:partickle
+updatePlayer	partickle.py	/^    def updatePlayer(self):$/;"	m	class:partickle
+vel	pakdapakdi.py	/^vel = [0, 0]$/;"	v
+velocity	physics.py	/^velocity = [0, 0]$/;"	v
+x	physics.py	/^        x = partickle(mass, position, velocity, acceleration, 2, color)$/;"	v
