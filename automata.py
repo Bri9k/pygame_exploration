@@ -60,7 +60,6 @@ class cellularAutomaton:
     def savefile_handler(self, filename):
         """ Saves current active bitmap to <filename>"""
         bitmap = self.currbitmap()
-        print(bitmap)
 
         if os.path.isfile(filename):
             os.remove(filename)
@@ -77,4 +76,63 @@ class cellularAutomaton:
             fp.close()
             self.bitmap1 = json.loads(json_str)
             self.bitmap2 = json.loads(json_str)
-            print(self.bitmap1)
+
+
+# several functions that can be used for demonstration
+
+def mann(bitmap, length, breadth, i, j):
+    """ From max mann's video """
+    if i == length - 1 or j == breadth - 1 or i == 0 or j == 0:
+        return 0
+
+    count = 0
+    for a in range(i - 1, i + 2):
+        for b in range(j - 1, j + 2):
+            if (not (i == a and b == j)) and bitmap[a][b] == 1:
+                count += 1
+
+    # loneliness or overcrowding
+    if count % 3 == 1:
+        return 1
+    else:
+        return 0
+ 
+def conway(bitmap, length, breadth, i, j):
+    """Conway's game of life"""
+    # kill the edge case headaches
+    if i == length - 1 or j == breadth - 1 or i == 0 or j == 0:
+        return bitmap[i][j]
+
+    count = 0
+    for a in range(i - 1, i + 2):
+        for b in range(j - 1, j + 2):
+            if (not (i == a and b == j)) and bitmap[a][b] == 1:
+                count += 1
+
+    # loneliness or overcrowding
+    if count <= 2 or count >= 5:
+        return 0
+    else:
+        return 1
+
+def blue_cells(bitmap, length, breadth, i, j):
+    """ From max mann's video """
+
+    # 35 35 works great with this
+
+    if i == length - 1 or j == breadth - 1 or i == 0 or j == 0:
+        return 0
+
+    count = 0
+    for a in range(i - 1, i + 2):
+        for b in range(j - 1, j + 2):
+            if (not (i == a and b == j)) and bitmap[a][b] > 0:
+                count += 1
+
+    # loneliness or overcrowding
+    if i == length // 2 or j == breadth // 2:
+        return 10
+    elif count >= 2 and count <= 5 and bitmap[i][j] < 235:
+        return bitmap[i][j] + 20
+    else:
+        return 0

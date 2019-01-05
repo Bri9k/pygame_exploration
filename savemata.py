@@ -1,18 +1,26 @@
 from automata import *
-import rules
-import random
 import pygame
 import sys
-import os
-import json
 
-height = int(sys.argv[1])
-breadth = int(sys.argv[2])
+arguements = len(sys.argv)
+print(sys.argv)
+if arguements == 1:
+    height = 35
+    breadth = 35
+    ticker = 5
+elif arguements == 3:
+    height = int(sys.argv[1])
+    breadth = int(sys.argv[2])
+    ticker = 5
+elif arguements == 4:
+    height = int(sys.argv[1])
+    breadth = int(sys.argv[2])
+    ticker = int(sys.argv[3])
 
-bitmap = [[False] * breadth for i in range(height)]
-bitmap[height // 2][breadth // 2] = True
+bitmap = [[0] * breadth for i in range(height)]
+bitmap[height // 2][breadth // 2] = 1
 
-currentpropagator = rules.mann
+currentpropagator = blue_cells
 
 dale = cellularAutomaton(bitmap, currentpropagator)
 
@@ -48,8 +56,7 @@ while going:
     screen.fill((0, 0, 0))
     for i in range(height):
         for j in range(breadth):
-            if(dale.cell(i, j)):
-                pygame.draw.rect(screen, (255, 255, 255), pygame.Rect(i * side, j * side, side - 1, side - 1), 0)
+            pygame.draw.rect(screen, (0, dale.cell(i, j) // 2, dale.cell(i, j)), pygame.Rect(i * side, j * side, side - 1, side - 1), 0)
 
     pygame.display.flip()
-    clock.tick(7)
+    clock.tick(ticker)
