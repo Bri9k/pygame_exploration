@@ -60,6 +60,7 @@ class cellularAutomaton:
     def savefile_handler(self, filename):
         """ Saves current active bitmap to <filename>"""
         bitmap = self.currbitmap()
+        print(bitmap)
 
         if os.path.isfile(filename):
             os.remove(filename)
@@ -73,11 +74,7 @@ class cellularAutomaton:
         if os.path.isfile(filename):
             fp = open(filename, "r")
             json_str = fp.read()
+            fp.close()
             self.bitmap1 = json.loads(json_str)
             self.bitmap2 = json.loads(json_str)
-            print("Loaded:")
             print(self.bitmap1)
-            fp.close()
-
-
-

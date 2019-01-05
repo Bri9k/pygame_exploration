@@ -34,23 +34,22 @@ while going:
                 # pause
                 paused = not paused
 
-            if event.key == pygame.K_s:
+            if event.key == pygame.K_s and paused:
                 # save to file
                 dale.savefile_handler("mapsv.txt")
 
-            if event.key == pygame.K_l:
+            if event.key == pygame.K_l and paused:
                 # read from file
                 dale.read_saved("mapsv.txt")
 
     if not paused:
-
         dale.propagate()
 
-        screen.fill((0, 0, 0))
-        for i in range(height):
-            for j in range(breadth):
-                if(dale.cell(i, j)):
-                    pygame.draw.rect(screen, (255, 255, 255), pygame.Rect(i * side, j * side, side - 1, side - 1), 0)
+    screen.fill((0, 0, 0))
+    for i in range(height):
+        for j in range(breadth):
+            if(dale.cell(i, j)):
+                pygame.draw.rect(screen, (255, 255, 255), pygame.Rect(i * side, j * side, side - 1, side - 1), 0)
 
-        pygame.display.flip()
-        clock.tick(7)
+    pygame.display.flip()
+    clock.tick(7)
