@@ -85,5 +85,5 @@ while running:
     pygame.display.flip()
 
     # wait- otherwise the box runs out of the screen- too many key presses
-    clock.tick(30)
+    clock.tick(3)
 
